@@ -9,11 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "GlobleHeaders.h"
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
-{
-    UIWindow *window;
-    UINavigationController *navigationController;
-    BMKMapManager* _mapManager;
-}
 @property (strong, nonatomic) UIWindow *window;
 
 

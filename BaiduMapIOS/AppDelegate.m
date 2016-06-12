@@ -7,8 +7,12 @@
 //
 
 #import "AppDelegate.h"
-
+#import "ViewController.h"
 @interface AppDelegate ()
+{
+    UINavigationController *navigationController;
+    BMKMapManager* _mapManager;
+}
 
 @end
 
@@ -24,9 +28,11 @@
     if (!ret) {
         NSLog(@"manager start failed!");
     }
-    // Add the navigation controller's view to the window and display.
-    [self.window addSubview:navigationController.view];
+    ViewController *VCRoot = [[ViewController alloc]init];
+    navigationController = [[UINavigationController alloc]initWithRootViewController:VCRoot];
+    self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];
+    navigationController.navigationBarHidden = YES;
     return YES;
     
    
